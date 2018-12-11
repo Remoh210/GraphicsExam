@@ -256,17 +256,11 @@ bool AreAllModifiersUp(GLFWwindow* window)
 	if ( IsShiftDown(window) )	{ return false;	}
 	if ( IsCtrlDown(window) )	{ return false;	} 
 	if ( IsAltDown(window) )	{ return false; }
-	// Yup, they are all UP
-	cMeshObject* player = findObjectByFriendlyName("Ufo2UVb");
 
-	//player->bIsUpdatedByPhysics = true;
 	if (glfwGetKey(window, GLFW_KEY_UP)) { 
-		
-		player->accel += camera.Front * 1.01f;
-		//player->velocity = camera.Front * 200.0f;
+
 	}
-	else{ player->accel = -player->velocity * 1.0f; }
-//	camera.Position = player->position + glm::vec3(0.0f, 0.0f, 0.5f);
+
 	return true;
 }
 
@@ -580,11 +574,7 @@ void commandsInterface()
 		std::cout << "Enter Time in seconds: " << std::endl;
 		std::cout << "->";
 		std::cin >> Answer;
-		//sNVPair Destination;	Destination.v3Value = findObjectByFriendlyName(Answer)->position;
-		//sNVPair Time;			Time.fValue = (float)atoi(Answer.c_str());
-		//vecInitValues.push_back(ObjectToMove);	// idealCameraLocation
-	//	vecInitValues.push_back(Destination);
-	//	vecInitValues.push_back(Time);
+
 
 	}
 
