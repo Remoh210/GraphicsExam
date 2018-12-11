@@ -15,6 +15,7 @@
 
 #include <iostream>
 
+
 bool HACK_bTextureUniformLocationsLoaded = false;
 GLint tex00_UniLoc = -1;
 GLint tex01_UniLoc = -1;
@@ -199,6 +200,9 @@ void DrawObject(cMeshObject* pCurrentMesh,
 	GLint objectDiffuse_UniLoc = glGetUniformLocation(shaderProgramID, "objectDiffuse");
 	GLint objectSpecular_UniLoc = glGetUniformLocation(shaderProgramID, "objectSpecular");
 
+	//Water Offset uniloc
+	
+
 	//uniform vec3 lightPos;
 	//uniform float lightAtten;
 	GLint lightPos_UniLoc = glGetUniformLocation(shaderProgramID, "lightPos");
@@ -266,6 +270,13 @@ void DrawObject(cMeshObject* pCurrentMesh,
 		pCurrentMesh->materialSpecular.g,
 		pCurrentMesh->materialSpecular.b,
 		pCurrentMesh->materialSpecular.a);
+
+
+
+
+
+
+
 
 	if (pCurrentMesh->bUseVertexColour)
 	{

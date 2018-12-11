@@ -9,6 +9,7 @@ in vec4 vertUV_x2;		// Texture coordinates
 
 uniform vec4 objectDiffuse;		// becomes objectDiffuse in the shader
 uniform vec4 objectSpecular;	// rgb + a, which is the power)
+uniform vec4 waterOffset;
 
 uniform vec3 eyeLocation;		// This is in "world space"
 
@@ -27,7 +28,7 @@ uniform bool bDontUseLighting;
 
 //vec4 gl_FragColor
 out vec4 finalOutputColour;		// Any name, but must be vec4
-
+vec4 waterOffsetHolder;
 struct sLight
 {
 	vec4 position;			
@@ -78,7 +79,7 @@ uniform float wholeObjectAlphaTransparency;
 
 void main()
 {
-
+	
 	vec4 materialDiffuse = vec4(0.0f, 0.0f, 0.0f, 1.0f);
 	
 	vec4 materialSpecular = objectSpecular;
@@ -153,14 +154,20 @@ void main()
 		//gl_FragColor = vec4(objectColour, 1.0);
 //		materialDiffuse = objectDiffuse;
 
+		waterOffsetHolder.x = vertUV_x2.x + waterOffset.x;
+		waterOffsetHolder.y = vertUV_x2.y + waterOffset.y;
+		waterOffsetHolder.z = vertUV_x2.x + waterOffset.z;
+		waterOffsetHolder.w = vertUV_x2.y + waterOffset.w;
+		
 		vec4 tex0Col = texture( texture00, vertUV_x2.st ).rgba;
 		vec4 tex1Col = texture( texture01, vertUV_x2.st ).rgba;
-		vec4 tex2Col = texture( texture02, vertUV_x2.st ).rgba;
-		vec4 tex3Col = texture( texture03, vertUV_x2.st ).rgba;
+		vec4 tex2Col = texture( texture02, waterOffsetHolder.st ).rgba;
+		vec4 tex3Col = texture( texture03, waterOffsetHolder.zw ).rgba;
 		vec4 tex4Col = texture( texture04, vertUV_x2.st ).rgba;
 		vec4 tex5Col = texture( texture05, vertUV_x2.st ).rgba;
 		vec4 tex6Col = texture( texture06, vertUV_x2.st ).rgba;
 		vec4 tex7Col = texture( texture07, vertUV_x2.st ).rgba;
+		
 		
 		materialDiffuse =  objectDiffuse
 						  + (tex0Col * texBlendWeights[0].x) 	 // 0

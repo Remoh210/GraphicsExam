@@ -19,7 +19,7 @@ cVAOMeshManager::~cVAOMeshManager()		// destructor
 	return;
 }
 
-// Note: the shader program ID is needed to tie 
+// Note: the shader program ID is needed to tie m_LoadDrawInfo_Into_VAO
 // the buffer to the vertex layout of the shader
 bool cVAOMeshManager::LoadModelIntoVAO(
 	sModelDrawInfo &drawInfo,

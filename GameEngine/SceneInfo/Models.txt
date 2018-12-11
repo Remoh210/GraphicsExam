@@ -8,9 +8,13 @@ Scale  1 1 1
 IsVisible  1
 IsUpdByPhys  1
 IsWireFrame  0
-Textures: 1
-Texture0_name caustics.bmp
-Texture0_strength 1
+Textures: 3
+Texture0_name metalTex.bmp
+Texture0_strength 0
+Texture1_name metalTex.bmp
+Texture1_strength 0
+Texture2_name caustics.bmp
+Texture2_strength 1
 Friendly_Name lower
 Mesh_Name upper.ply
 Position 0 0 0
@@ -21,9 +25,15 @@ Scale  1 1 1
 IsVisible  1
 IsUpdByPhys  1
 IsWireFrame  0
-Textures: 1
-Texture0_name waterTex.bmp
-Texture0_strength 1
+Textures: 4
+Texture0_name metalTex.bmp
+Texture0_strength 0
+Texture1_name metalTex.bmp
+Texture1_strength 0
+Texture2_name metalTex.bmp
+Texture2_strength 0
+Texture2_name waterTex.bmp
+Texture2_strength 1
 Friendly_Name ivysaur
 Mesh_Name ivysaur.ply
 Position 0 0 0

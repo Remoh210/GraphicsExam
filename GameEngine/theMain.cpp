@@ -38,7 +38,7 @@ std::vector<cAABB::sAABB_Triangle> vec_cur_AABB_tris;
 void UpdateWindowTitle(void);
 double currentTime = 0;
 double deltaTime = 0;
-
+glm::vec4 waterOffset = glm::vec4(0.0f);
 void DoPhysicsUpdate( double deltaTime, 
 					  std::vector< cMeshObject* > &vec_pObjectsToDraw );
 
@@ -331,7 +331,7 @@ int main(void)
 
 
 	//*****************************************************************
-	
+	float offtime = 0;
 	// Draw the "scene" (run the program)
 	while (!glfwWindowShouldClose(window))
     {
@@ -339,9 +339,23 @@ int main(void)
 		// Switch to the shader we want
 		::pTheShaderManager->useShaderProgram( "BasicUberShader" );
 
+
+		waterOffset.x = +0.1f * offtime;
+		waterOffset.y = +0.017f * offtime;
+		waterOffset.z = -0.13f * offtime;
+		waterOffset.w = -0.013f * offtime;
+		offtime += deltaTime;
+
+		GLint waterOffset_UniLoc = glGetUniformLocation(program, "waterOffset");
+		glUniform4f(waterOffset_UniLoc, 
+			waterOffset.x,
+			waterOffset.y,
+			waterOffset.z,
+			waterOffset.w);
+
         float ratio;
         int width, height;
-
+		
 
 
 		glm::mat4x4 matProjection = glm::mat4(1.0f);
@@ -382,7 +396,6 @@ int main(void)
 		// Do all this ONCE per frame
 		LightManager->CopyLightValuesToShader();
 			
-
 
 
 
