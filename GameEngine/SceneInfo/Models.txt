@@ -50,3 +50,174 @@ IsWireFrame  0
 Textures: 1
 Texture0_name sandTex.bmp
 Texture0_strength 1
+Friendly_Name rock_1
+Mesh_Name SM_Env_Rock_Large_05.ply
+Position 0 0 0
+DiffureRGB_Alpha  0 0 0 1
+SpecularRGB_Power 1 1 1 100
+QuatXYZW_rotation 0 0 0 1
+Scale  1 1 1
+IsVisible  1
+IsUpdByPhys  1
+IsWireFrame  0
+Textures: 1
+Texture0_name rockTex.bmp
+Texture0_strength 1
+Friendly_Name rock_2
+Mesh_Name SM_Env_Rock_Large_01.ply
+Position 0 0 0
+DiffureRGB_Alpha  0 0 0 1
+SpecularRGB_Power 1 1 1 100
+QuatXYZW_rotation 0 0 0 1
+Scale  1 1 1
+IsVisible  1
+IsUpdByPhys  1
+IsWireFrame  0
+Textures: 1
+Texture0_name rockTex.bmp
+Texture0_strength 1
+Friendly_Name cave
+Mesh_Name SM_Env_Rock_Arch_01.ply
+Position 0 0 0
+DiffureRGB_Alpha  0 0 0 1
+SpecularRGB_Power 1 1 1 100
+QuatXYZW_rotation 0 0 0 1
+Scale  1 1 1
+IsVisible  1
+IsUpdByPhys  1
+IsWireFrame  0
+Textures: 1
+Texture0_name rockTex.bmp
+Texture0_strength 1
+Friendly_Name skull
+Mesh_Name SM_Env_Rock_Skull_01.ply
+Position 0 0 0
+DiffureRGB_Alpha  0 0 0 1
+SpecularRGB_Power 1 1 1 100
+QuatXYZW_rotation 0 0 0 1
+Scale  1 1 1
+IsVisible  1
+IsUpdByPhys  1
+IsWireFrame  0
+Textures: 1
+Texture0_name rockTex.bmp
+Texture0_strength 1
+Friendly_Name small_rock_1
+Mesh_Name SM_Env_Rock_01.ply
+Position 0 0 0
+DiffureRGB_Alpha  0 0 0 1
+SpecularRGB_Power 1 1 1 100
+QuatXYZW_rotation 0 0 0 1
+Scale  1 1 1
+IsVisible  1
+IsUpdByPhys  1
+IsWireFrame  0
+Textures: 1
+Texture0_name rockTex.bmp
+Texture0_strength 1
+Friendly_Name small_rock_2
+Mesh_Name SM_Env_Rock_02.ply
+Position 0 0 0
+DiffureRGB_Alpha  0 0 0 1
+SpecularRGB_Power 1 1 1 100
+QuatXYZW_rotation 0 0 0 1
+Scale  1 1 1
+IsVisible  1
+IsUpdByPhys  1
+IsWireFrame  0
+Textures: 1
+Texture0_name rockTex.bmp
+Texture0_strength 1
+Friendly_Name small_rock_3
+Mesh_Name SM_Env_Rock_03.ply
+Position 0 0 0
+DiffureRGB_Alpha  0 0 0 1
+SpecularRGB_Power 1 1 1 100
+QuatXYZW_rotation 0 0 0 1
+Scale  1 1 1
+IsVisible  1
+IsUpdByPhys  1
+IsWireFrame  0
+Textures: 1
+Texture0_name rockTex.bmp
+Texture0_strength 1
+Friendly_Name tree_base_1
+Mesh_Name SM_Env_Tree_Base_01.ply
+Position 0 0 0
+DiffureRGB_Alpha  0 0 0 1
+SpecularRGB_Power 1 1 1 100
+QuatXYZW_rotation 0 0 0 1
+Scale  1 1 1
+IsVisible  1
+IsUpdByPhys  1
+IsWireFrame  0
+Textures: 1
+Texture0_name treeTex.bmp
+Texture0_strength 1
+Friendly_Name tree_base_2
+Mesh_Name SM_Env_Tree_Base_02.ply
+Position 0 0 0
+DiffureRGB_Alpha  0 0 0 1
+SpecularRGB_Power 1 1 1 100
+QuatXYZW_rotation 0 0 0 1
+Scale  1 1 1
+IsVisible  1
+IsUpdByPhys  1
+IsWireFrame  0
+Textures: 1
+Texture0_name treeTex.bmp
+Texture0_strength 1
+Friendly_Name tree_Canopy_1
+Mesh_Name SM_Env_Tree_Canopy_01.ply
+Position 0 0 0
+DiffureRGB_Alpha  0 0 0 1
+SpecularRGB_Power 1 1 1 100
+QuatXYZW_rotation 0 0 0 1
+Scale  1 1 1
+IsVisible  1
+IsUpdByPhys  1
+IsWireFrame  0
+Textures: 1
+Texture0_name leavesTex.bmp
+Texture0_strength 1
+Friendly_Name tree_Canopy_2
+Mesh_Name SM_Env_Tree_Canopy_02.ply
+Position 0 0 0
+DiffureRGB_Alpha  0 0 0 1
+SpecularRGB_Power 1 1 1 100
+QuatXYZW_rotation 0 0 0 1
+Scale  1 1 1
+IsVisible  1
+IsUpdByPhys  1
+IsWireFrame  0
+Textures: 1
+Texture0_name leavesTex.bmp
+Texture0_strength 1
+Friendly_Name tree_Canopy_3
+Mesh_Name SM_Env_Tree_Canopy_03.ply
+Position 0 0 0
+DiffureRGB_Alpha  0 0 0 1
+SpecularRGB_Power 1 1 1 100
+QuatXYZW_rotation 0 0 0 1
+Scale  1 1 1
+IsVisible  1
+IsUpdByPhys  1
+IsWireFrame  0
+Textures: 1
+Texture0_name leavesTex.bmp
+Texture0_strength 1
+Friendly_Name tree_Canopy_4
+Mesh_Name SM_Env_Tree_Canopy_04.ply
+Position 0 0 0
+DiffureRGB_Alpha  0 0 0 1
+SpecularRGB_Power 1 1 1 100
+QuatXYZW_rotation 0 0 0 1
+Scale  1 1 1
+IsVisible  1
+IsUpdByPhys  1
+IsWireFrame  0
+Textures: 1
+Texture0_name leavesTex.bmp
+Texture0_strength 1
+
+

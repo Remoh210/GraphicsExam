@@ -266,17 +266,18 @@ bool AreAllModifiersUp(GLFWwindow* window)
 
 void ProcessAsynKeys(GLFWwindow* window)
 {
-	const float CAMERA_SPEED_SLOW = 5.0f;
-	const float CAMERA_SPEED_FAST = 10.0f;
-
+	const float CAMERA_SPEED_SLOW = 0.25f;
+	const float CAMERA_SPEED_FAST = 1.0f;
+	float cameraSpeed = CAMERA_SPEED_SLOW;
 	// WASD + q = "up", e = down		y axis = up and down
 	//									x axis = left and right
 	//									z axis = forward and backward
 	// 
 
-	float cameraSpeed = CAMERA_SPEED_SLOW;
+	camera.MovementSpeed = 30.0f;
 	if ( glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS  )
 	{
+		camera.MovementSpeed = 100.0f;
 		cameraSpeed = CAMERA_SPEED_FAST;
 	}
 	
