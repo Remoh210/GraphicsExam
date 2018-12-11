@@ -44,9 +44,9 @@ void LoadModelTypes( cVAOMeshManager* pTheVAOMeshManager, GLuint shaderProgramID
 	::g_pTheTextureManager->SetBasePath("assets/textures/cubemaps");
 	std::string errorString;
 	if (::g_pTheTextureManager->CreateCubeTextureFromBMPFiles("CityCubeMap",
-		"city_lf.bmp", "city_rt.bmp",				// reverse these
-		"city_dn.bmp", "city_up.bmp",				// Rotate the image "right 90 degrees")
-		"city_ft.bmp", "city_bk.bmp", true, errorString))
+		"Tropical_if.bmp", "Tropical_rt.bmp",				// reverse these
+		"Tropical_dn.bmp", "Tropical_up.bmp",				// Rotate the image "right 90 degrees")
+		"Tropical_ft.bmp", "Tropical_bk.bmp", true, errorString))
 	{
 		std::cout << "Loaded the city cube map OK" << std::endl;
 	}

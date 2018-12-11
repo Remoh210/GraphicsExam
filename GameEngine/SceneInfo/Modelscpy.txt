@@ -9,7 +9,7 @@ IsVisible  1
 IsUpdByPhys  1
 IsWireFrame  0
 Textures: 1
-Texture0_name caustics.bmp
+Texture0_name waterTex.bmp
 Texture0_strength 1
 Friendly_Name lower
 Mesh_Name upper.ply
@@ -22,7 +22,7 @@ IsVisible  1
 IsUpdByPhys  1
 IsWireFrame  0
 Textures: 1
-Texture0_name waterTex.bmp
+Texture0_name sandTex.bmp
 Texture0_strength 1
 Friendly_Name ivysaur
 Mesh_Name ivysaur.ply
@@ -167,58 +167,6 @@ IsWireFrame  0
 Textures: 1
 Texture0_name treeTex.bmp
 Texture0_strength 1
-Friendly_Name tree_base_3
-Mesh_Name SM_Env_Tree_Base_02.ply
-Position -20.75 20.25 -55
-DiffureRGB_Alpha  0 0 0 1
-SpecularRGB_Power 1 1 1 100
-QuatXYZW_rotation 0 0 0 1
-Scale  1 1 1
-IsVisible  1
-IsUpdByPhys  1
-IsWireFrame  0
-Textures: 1
-Texture0_name treeTex.bmp
-Texture0_strength 1
-Friendly_Name tree_base_4
-Mesh_Name SM_Env_Tree_Base_02.ply
-Position -9 27.5 -45
-DiffureRGB_Alpha  0 0 0 1
-SpecularRGB_Power 1 1 1 100
-QuatXYZW_rotation 0 0 0 1
-Scale  1 1 1
-IsVisible  1
-IsUpdByPhys  1
-IsWireFrame  0
-Textures: 1
-Texture0_name treeTex.bmp
-Texture0_strength 1
-Friendly_Name tree_base_5
-Mesh_Name SM_Env_Tree_Base_01.ply
-Position -0.5 38.75 21.25
-DiffureRGB_Alpha  0 0 0 1
-SpecularRGB_Power 1 1 1 100
-QuatXYZW_rotation 0 0 0 1
-Scale  1 1 1
-IsVisible  1
-IsUpdByPhys  1
-IsWireFrame  0
-Textures: 1
-Texture0_name treeTex.bmp
-Texture0_strength 1
-Friendly_Name tree_base_6
-Mesh_Name SM_Env_Tree_Base_01.ply
-Position -15.75 27.5 17.25
-DiffureRGB_Alpha  0 0 0 1
-SpecularRGB_Power 1 1 1 100
-QuatXYZW_rotation 0 -0.0998334 0 0.995004
-Scale  0.8 0.8 0.8
-IsVisible  1
-IsUpdByPhys  1
-IsWireFrame  0
-Textures: 1
-Texture0_name treeTex.bmp
-Texture0_strength 1
 Friendly_Name tree_Canopy_1
 Mesh_Name SM_Env_Tree_Canopy_01.ply
 Position -5.25 33.25 -36.75
@@ -247,11 +195,11 @@ Texture0_name leavesTex.bmp
 Texture0_strength 1
 Friendly_Name tree_Canopy_3
 Mesh_Name SM_Env_Tree_Canopy_03.ply
-Position -0.5 46 21.25
+Position 0 0 0
 DiffureRGB_Alpha  0 0 0 1
 SpecularRGB_Power 1 1 1 100
 QuatXYZW_rotation 0 0 0 1
-Scale  0.2 0.2 0.2
+Scale  1 1 1
 IsVisible  1
 IsUpdByPhys  1
 IsWireFrame  0
@@ -260,63 +208,11 @@ Texture0_name leavesTex.bmp
 Texture0_strength 1
 Friendly_Name tree_Canopy_4
 Mesh_Name SM_Env_Tree_Canopy_04.ply
-Position -9 35 -45.25
-DiffureRGB_Alpha  0 0 0 1
-SpecularRGB_Power 1 1 1 100
-QuatXYZW_rotation 0 -0.564642 0 0.825336
-Scale  0.2 0.2 0.2
-IsVisible  1
-IsUpdByPhys  1
-IsWireFrame  0
-Textures: 1
-Texture0_name leavesTex.bmp
-Texture0_strength 1
-Friendly_Name tree_Canopy_5
-Mesh_Name SM_Env_Tree_Canopy_01.ply
-Position -20.75 28 -55.75
+Position 0 0 0
 DiffureRGB_Alpha  0 0 0 1
 SpecularRGB_Power 1 1 1 100
 QuatXYZW_rotation 0 0 0 1
-Scale  0.4 0.4 0.4
-IsVisible  1
-IsUpdByPhys  1
-IsWireFrame  0
-Textures: 1
-Texture0_name leavesTex.bmp
-Texture0_strength 1
-Friendly_Name tree_Canopy_6
-Mesh_Name SM_Env_Tree_Canopy_02.ply
-Position -20 15.75 0.5
-DiffureRGB_Alpha  0 0 0 1
-SpecularRGB_Power 1 1 1 100
-QuatXYZW_rotation 0 -0.0998339 0 0.995004
-Scale  0.2 0.2 0.2
-IsVisible  1
-IsUpdByPhys  1
-IsWireFrame  0
-Textures: 1
-Texture0_name leavesTex.bmp
-Texture0_strength 1
-Friendly_Name tree_Canopy_7
-Mesh_Name SM_Env_Tree_Canopy_03.ply
-Position 0 44 21.25
-DiffureRGB_Alpha  0 0 0 1
-SpecularRGB_Power 1 1 1 100
-QuatXYZW_rotation 0 0 0 1
-Scale  0.4 0.4 0.4
-IsVisible  1
-IsUpdByPhys  1
-IsWireFrame  0
-Textures: 1
-Texture0_name leavesTex.bmp
-Texture0_strength 1
-Friendly_Name tree_Canopy_8
-Mesh_Name SM_Env_Tree_Canopy_04.ply
-Position -15.75 33.25 18
-DiffureRGB_Alpha  0 0 0 1
-SpecularRGB_Power 1 1 1 100
-QuatXYZW_rotation 0 0 0 1
-Scale  0.2 0.2 0.2
+Scale  1 1 1
 IsVisible  1
 IsUpdByPhys  1
 IsWireFrame  0
