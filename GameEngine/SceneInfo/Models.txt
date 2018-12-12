@@ -62,11 +62,11 @@ Texture0_name sandTex.bmp
 Texture0_strength 1
 Friendly_Name rock_1
 Mesh_Name SM_Env_Rock_Large_05.ply
-Position -17.5 9.25 -24.75
+Position -16.5 9 -27.5
 DiffureRGB_Alpha  0 0 0 1
 SpecularRGB_Power 1 1 1 100
-QuatXYZW_rotation 0 0 0 1
-Scale  1 1 1
+QuatXYZW_rotation 0.0313424 -0.521745 0.0511207 0.850988
+Scale  1.42 1.42 1.42
 IsVisible  1
 IsUpdByPhys  1
 IsWireFrame  0
@@ -75,11 +75,11 @@ Texture0_name rockTex.bmp
 Texture0_strength 1
 Friendly_Name rock_2
 Mesh_Name SM_Env_Rock_Large_01.ply
-Position -23 7.75 7.5
+Position -22.5 7.75 7.5
 DiffureRGB_Alpha  0 0 0 1
 SpecularRGB_Power 1 1 1 100
 QuatXYZW_rotation 0 0 0 1
-Scale  1 1 1
+Scale  1.64 1.64 1.64
 IsVisible  1
 IsUpdByPhys  1
 IsWireFrame  0
@@ -88,11 +88,11 @@ Texture0_name rockTex.bmp
 Texture0_strength 1
 Friendly_Name cave
 Mesh_Name SM_Env_Rock_Arch_01.ply
-Position -30.75 9.75 -44.75
+Position -28.75 8.75 -43.75
 DiffureRGB_Alpha  0 0 0 1
 SpecularRGB_Power 1 1 1 100
-QuatXYZW_rotation 0 -0.644218 0 0.764842
-Scale  1 1 1
+QuatXYZW_rotation 0.0489659 -0.677531 -0.0910947 0.728179
+Scale  1.44 1.44 1.44
 IsVisible  1
 IsUpdByPhys  1
 IsWireFrame  0
@@ -101,7 +101,7 @@ Texture0_name rockTex.bmp
 Texture0_strength 1
 Friendly_Name skull
 Mesh_Name SM_Env_Rock_Skull_01.ply
-Position 3.5 27.5 49.75
+Position 3.5 27.25 49.75
 DiffureRGB_Alpha  0 0 0 1
 SpecularRGB_Power 1 1 1 100
 QuatXYZW_rotation 0 -0.891207 0 0.453596
@@ -114,11 +114,11 @@ Texture0_name rockTex.bmp
 Texture0_strength 1
 Friendly_Name small_rock_1
 Mesh_Name SM_Env_Rock_01.ply
-Position -8.25 25 -36.25
+Position -4.25 25 -32.5
 DiffureRGB_Alpha  0 0 0 1
 SpecularRGB_Power 1 1 1 100
-QuatXYZW_rotation 0 0 0 1
-Scale  1 1 1
+QuatXYZW_rotation 0 -0.572866 0 0.819646
+Scale  2.04 2.04 2.04
 IsVisible  1
 IsUpdByPhys  1
 IsWireFrame  0
@@ -127,11 +127,11 @@ Texture0_name rockTex.bmp
 Texture0_strength 1
 Friendly_Name small_rock_2
 Mesh_Name SM_Env_Rock_02.ply
-Position -7 28.75 0
+Position -3.75 28.75 -4
 DiffureRGB_Alpha  0 0 0 1
 SpecularRGB_Power 1 1 1 100
-QuatXYZW_rotation 0 0 0 1
-Scale  1 1 1
+QuatXYZW_rotation 0 -0.342897 0 0.939372
+Scale  1.52 1.52 1.52
 IsVisible  1
 IsUpdByPhys  1
 IsWireFrame  0
@@ -140,11 +140,11 @@ Texture0_name rockTex.bmp
 Texture0_strength 1
 Friendly_Name small_rock_3
 Mesh_Name SM_Env_Rock_03.ply
-Position -28 8.75 50.25
+Position -24.75 8.75 50.5
 DiffureRGB_Alpha  0 0 0 1
 SpecularRGB_Power 1 1 1 100
-QuatXYZW_rotation 0 0 0 1
-Scale  1 1 1
+QuatXYZW_rotation 0 -0.581034 0 0.813877
+Scale  2.22 2.22 2.22
 IsVisible  1
 IsUpdByPhys  1
 IsWireFrame  0
@@ -192,7 +192,7 @@ Texture0_name treeTex.bmp
 Texture0_strength 1
 Friendly_Name tree_base_4
 Mesh_Name SM_Env_Tree_Base_02.ply
-Position -9 27.5 -45
+Position -8.5 27.5 -45
 DiffureRGB_Alpha  0 0 0 1
 SpecularRGB_Power 1 1 1 100
 QuatXYZW_rotation 0 0 0 1
@@ -218,10 +218,10 @@ Texture0_name treeTex.bmp
 Texture0_strength 1
 Friendly_Name tree_base_6
 Mesh_Name SM_Env_Tree_Base_01.ply
-Position -15.75 27.5 17.25
+Position -16 27.5 17.25
 DiffureRGB_Alpha  0 0 0 1
 SpecularRGB_Power 1 1 1 100
-QuatXYZW_rotation 0 -0.0998334 0 0.995004
+QuatXYZW_rotation -0.109464 0.99083 -0.00588968 0.0786854
 Scale  0.8 0.8 0.8
 IsVisible  1
 IsUpdByPhys  1
@@ -312,7 +312,7 @@ Mesh_Name SM_Env_Tree_Canopy_03.ply
 Position 0 44 21.25
 DiffureRGB_Alpha  0 0 0 1
 SpecularRGB_Power 1 1 1 100
-QuatXYZW_rotation 0 0 0 1
+QuatXYZW_rotation 0 -0.149438 0 0.98877
 Scale  0.4 0.4 0.4
 IsVisible  1
 IsUpdByPhys  1
@@ -322,10 +322,10 @@ Texture0_name leavesTex.bmp
 Texture0_strength 1
 Friendly_Name tree_Canopy_8
 Mesh_Name SM_Env_Tree_Canopy_04.ply
-Position -15.75 33.25 18
+Position -17 33.25 17.5
 DiffureRGB_Alpha  0 0 0 1
 SpecularRGB_Power 1 1 1 100
-QuatXYZW_rotation 0 0 0 1
+QuatXYZW_rotation -0.0735696 -0.45588 0.141314 0.875663
 Scale  0.2 0.2 0.2
 IsVisible  1
 IsUpdByPhys  1

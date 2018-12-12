@@ -95,8 +95,8 @@ void key_callback( GLFWwindow* window,
 
 	if (glfwGetKey(window, GLFW_KEY_L))
 	{
-		loadModels("Models2.txt", vec_pObjectsToDraw);
-		loadLights("lights.txt", LightManager->vecLights);
+		//loadModels("Models2.txt", vec_pObjectsToDraw);
+		//loadLights("lights.txt", LightManager->vecLights);
 	}
 
 	if (glfwGetKey(window, GLFW_KEY_R))
@@ -310,7 +310,11 @@ void ProcessAsynKeys(GLFWwindow* window)
 	{
 		
 		
-		
+		if (glfwGetKey(window, GLFW_KEY_L)) {
+			
+			//std::cout << randat  << std::endl;
+		}
+
 		if ( glfwGetKey( window, GLFW_KEY_W ) )	{	LightManager->vecLights.at(lightIndex)->position.z += cameraSpeed;	}
 		if ( glfwGetKey( window, GLFW_KEY_S ) )	{	LightManager->vecLights.at(lightIndex)->position.z -= cameraSpeed;	}
 		if ( glfwGetKey( window, GLFW_KEY_A ) )	{	LightManager->vecLights.at(lightIndex)->position.x -= cameraSpeed;	}
@@ -368,30 +372,30 @@ void ProcessAsynKeys(GLFWwindow* window)
 		//change attenuation:
 
 		////Linear
-		if ( glfwGetKey( window, GLFW_KEY_LEFT)  )	{ LightManager->vecLights.at(lightIndex)->atten.y *= 1.05f; }
-		if ( glfwGetKey( window, GLFW_KEY_RIGHT) )  { LightManager->vecLights.at(lightIndex)->atten.y *= 0.95f; }
+		//if ( glfwGetKey( window, GLFW_KEY_LEFT)  )	{ LightManager->vecLights.at(lightIndex)->atten.y *= 1.05f; }
+		//if ( glfwGetKey( window, GLFW_KEY_RIGHT) )  { LightManager->vecLights.at(lightIndex)->atten.y *= 0.95f; }
 
-		////Quadratic
+		//Quadratic
 		//if ( glfwGetKey( window, GLFW_KEY_DOWN) )   { LightManager->vecLights.at(lightIndex)->atten.z *= 0.95f; }
 		//if ( glfwGetKey( window, GLFW_KEY_UP)   )	{ LightManager->vecLights.at(lightIndex)->atten.z *= 1.05f; }
 
 
-		
-		if ( glfwGetKey( window, GLFW_KEY_DOWN) )  
-		{ 
-			if (dayMix > 0.0f) {
-				LightManager->vecLights.at(lightIndex)->atten.z *= 1.005f;
-				dayMix -= 0.002f;
+		if (IsAltDown(window)) {
+			if (glfwGetKey(window, GLFW_KEY_DOWN))
+			{
+				if (dayMix > 0.0f) {
+					LightManager->vecLights.at(lightIndex)->atten.z *= 1.005f;
+					dayMix -= 0.002f;
+				}
+			}
+			if (glfwGetKey(window, GLFW_KEY_UP))
+			{
+				if (dayMix < 1.0f) {
+					LightManager->vecLights.at(lightIndex)->atten.z *= 0.995f;
+					dayMix += 0.002f;
+				}
 			}
 		}
-		if ( glfwGetKey( window, GLFW_KEY_UP)  )   
-		{ 
-			if (dayMix < 1.0f) {
-				LightManager->vecLights.at(lightIndex)->atten.z *= 0.995f;
-				dayMix += 0.002f;
-			}
-		}
-		
 
 	}
 
@@ -408,15 +412,19 @@ void ProcessAsynKeys(GLFWwindow* window)
 		if ( glfwGetKey( window, GLFW_KEY_E ) )	{ vec_pObjectsToDraw.at(index)->position.y += cameraSpeed; }
 
 		////Object Rotation
-		if (glfwGetKey(window, GLFW_KEY_RIGHT)) { vec_pObjectsToDraw.at(index)->adjMeshOrientationEulerAngles(0.0f, 0.1f, 0.0f, false); }
-		if (glfwGetKey(window, GLFW_KEY_LEFT)) {vec_pObjectsToDraw.at(index)->adjMeshOrientationEulerAngles(0.0f, -0.1f, 0.0f, false);}
+		if (glfwGetKey(window, GLFW_KEY_RIGHT)) { vec_pObjectsToDraw.at(index)->adjMeshOrientationEulerAngles(0.0f, 0.01f, 0.0f, false); }
+		if (glfwGetKey(window, GLFW_KEY_LEFT)) {vec_pObjectsToDraw.at(index)->adjMeshOrientationEulerAngles(0.0f, -0.01f, 0.0f, false);}
+		//if (glfwGetKey(window, GLFW_KEY_UP)) { vec_pObjectsToDraw.at(index)->adjMeshOrientationEulerAngles(0.01f, 0.0f, 0.0f, false); }
+		//if (glfwGetKey(window, GLFW_KEY_DOWN)) { vec_pObjectsToDraw.at(index)->adjMeshOrientationEulerAngles(-0.01f, 0.0f, 0.0f, false); }
+		if (glfwGetKey(window, GLFW_KEY_C)) { vec_pObjectsToDraw.at(index)->adjMeshOrientationEulerAngles(0.0f, 0.0f, 0.01f, false); }
+		if (glfwGetKey(window, GLFW_KEY_X)) { vec_pObjectsToDraw.at(index)->adjMeshOrientationEulerAngles(0.0f, 0.01f, -0.01f, false); }
 		//if ( glfwGetKey( window, GLFW_KEY_UP ) )	{ vec_pObjectsToDraw.at(index)->postRotation.x += 0.1f; }
 		//if ( glfwGetKey( window, GLFW_KEY_DOWN ) )	{ vec_pObjectsToDraw.at(index)->postRotation.x -= 0.1f; }
 		//if ( glfwGetKey( window, GLFW_KEY_X ) )		{ vec_pObjectsToDraw.at(index)->postRotation.z += 0.1f; }
 		//if ( glfwGetKey( window, GLFW_KEY_C ) )		{ vec_pObjectsToDraw.at(index)->postRotation.z -= 0.1f; }
 
-		if (glfwGetKey(window, GLFW_KEY_V)) { vec_pObjectsToDraw.at(index)->nonUniformScale += 0.2f; }
-		if (glfwGetKey(window, GLFW_KEY_B)) { vec_pObjectsToDraw.at(index)->nonUniformScale -= 0.2f; }
+		if (glfwGetKey(window, GLFW_KEY_V)) { vec_pObjectsToDraw.at(index)->nonUniformScale += 0.02f; }
+		if (glfwGetKey(window, GLFW_KEY_B)) { vec_pObjectsToDraw.at(index)->nonUniformScale -= 0.02f; }
 
 
 

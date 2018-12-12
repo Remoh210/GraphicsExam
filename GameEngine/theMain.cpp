@@ -699,7 +699,13 @@ int main(void)
 			}
 		}
 
+		float randat = rand() % 10000000 + 1;
+		randat = randat * 0.00001;
+		LightManager->vecLights.at(1)->atten.y = randat;
 
+		randat = rand() % 10000000 + 1;
+		randat = randat * 0.00001;
+		LightManager->vecLights.at(2)->atten.y = randat;
 
 
 		UpdateWindowTitle();
