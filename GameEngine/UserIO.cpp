@@ -367,13 +367,30 @@ void ProcessAsynKeys(GLFWwindow* window)
 
 		//change attenuation:
 
-		//Linear
+		////Linear
 		if ( glfwGetKey( window, GLFW_KEY_LEFT)  )	{ LightManager->vecLights.at(lightIndex)->atten.y *= 1.05f; }
 		if ( glfwGetKey( window, GLFW_KEY_RIGHT) )  { LightManager->vecLights.at(lightIndex)->atten.y *= 0.95f; }
 
-		//Quadratic
-		if ( glfwGetKey( window, GLFW_KEY_DOWN) )   { LightManager->vecLights.at(lightIndex)->atten.z *= 0.95f; }
-		if ( glfwGetKey( window, GLFW_KEY_UP)   )	{ LightManager->vecLights.at(lightIndex)->atten.z *= 1.05f; }
+		////Quadratic
+		//if ( glfwGetKey( window, GLFW_KEY_DOWN) )   { LightManager->vecLights.at(lightIndex)->atten.z *= 0.95f; }
+		//if ( glfwGetKey( window, GLFW_KEY_UP)   )	{ LightManager->vecLights.at(lightIndex)->atten.z *= 1.05f; }
+
+
+		
+		if ( glfwGetKey( window, GLFW_KEY_DOWN) )  
+		{ 
+			if (dayMix > 0.0f) {
+				LightManager->vecLights.at(lightIndex)->atten.z *= 1.005f;
+				dayMix -= 0.002f;
+			}
+		}
+		if ( glfwGetKey( window, GLFW_KEY_UP)  )   
+		{ 
+			if (dayMix < 1.0f) {
+				LightManager->vecLights.at(lightIndex)->atten.z *= 0.995f;
+				dayMix += 0.002f;
+			}
+		}
 		
 
 	}

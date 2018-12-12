@@ -54,6 +54,18 @@ void LoadModelTypes( cVAOMeshManager* pTheVAOMeshManager, GLuint shaderProgramID
 	{
 		std::cout << "Error: city cube map DIDN't load. On no!" << std::endl;
 	}
+	//::g_pTheTextureManager->SetBasePath("assets/textures/cubemaps");
+	if (::g_pTheTextureManager->CreateCubeTextureFromBMPFiles("SpaceCubeMap",
+		"space_rt.bmp", "space_lf.bmp",				// reverse these
+		"space_up.bmp", "space_dn.bmp",				// Rotate the image "right 90 degrees")
+		"space_ft.bmp", "space_bk.bmp", true, errorString))
+	{
+		std::cout << "Loaded the space cube map OK" << std::endl;
+	}
+	else
+	{
+		std::cout << "Error: city cube map DIDN't load. On no!" << std::endl;
+	}
 	//::g_pTheTextureManager->SetBasePath("assets/textures");
 
 	//if (!::g_pTheTextureManager->Create2DTextureFromBMPFile("roomTex.bmp", true))

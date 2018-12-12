@@ -3,7 +3,7 @@ light_type 0
 In_Out_Angles 15 35
 Position_xyz -248.25 1741 -5.25
 Direction 0 -1 1
-Attenuation_xyz 0 9.23597e-06 3.82946e-07
+Attenuation_xyz 0 9.23597e-06 4.34858e-07
 Diffuse_rgbw 1 1 1 1
 on_off 1
 Name Torch_Light0

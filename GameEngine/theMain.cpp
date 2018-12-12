@@ -43,7 +43,7 @@ void DoPhysicsUpdate( double deltaTime,
 					  std::vector< cMeshObject* > &vec_pObjectsToDraw );
 
 std::vector< cMeshObject* > vec_pObjectsToDraw;
-
+float dayMix = 1.0f;
 // To the right, up 4.0 units, along the x axis
 glm::vec3 g_lightPos = glm::vec3( 4.0f, 4.0f, 0.0f );
 float g_lightBrightness = 400000.0f;
@@ -353,6 +353,14 @@ int main(void)
 			waterOffset.z,
 			waterOffset.w);
 
+
+
+		GLint dayMix_UniLoc = glGetUniformLocation(program, "dayMix");
+
+		glUniform1f(dayMix_UniLoc,
+			dayMix);
+
+
         float ratio;
         int width, height;
 		
@@ -419,20 +427,25 @@ int main(void)
 		// Bind the cube map texture to the cube map in the shader
 		GLuint cityTextureUNIT_ID = 30;			// Texture unit go from 0 to 79
 		glActiveTexture(cityTextureUNIT_ID + GL_TEXTURE0);	// GL_TEXTURE0 = 33984
-
 		int cubeMapTextureID = ::g_pTheTextureManager->getTextureIDFromName("CityCubeMap");
-
-		// Cube map is now bound to texture unit 30
-		//		glBindTexture( GL_TEXTURE_2D, cubeMapTextureID );
 		glBindTexture(GL_TEXTURE_CUBE_MAP, cubeMapTextureID);
-
-		//uniform samplerCube textureSkyBox;
 		GLint skyBoxCubeMap_UniLoc = glGetUniformLocation(program, "textureSkyBox");
 		glUniform1i(skyBoxCubeMap_UniLoc, cityTextureUNIT_ID);
+
+
+		GLuint spaceTextureUNIT_ID = 31;
+		glActiveTexture(spaceTextureUNIT_ID + GL_TEXTURE0);
+		int SpaceCubeMapTextureID = ::g_pTheTextureManager->getTextureIDFromName("SpaceCubeMap");
+		glBindTexture(GL_TEXTURE_CUBE_MAP, SpaceCubeMapTextureID);
+		GLint skyBoxCubeMap2_UniLoc = glGetUniformLocation(program, "textureSkyBox2");
+		glUniform1i(skyBoxCubeMap2_UniLoc, spaceTextureUNIT_ID);
 
 		//uniform bool useSkyBoxTexture;
 		GLint useSkyBoxTexture_UniLoc = glGetUniformLocation(program, "useSkyBoxTexture");
 		glUniform1f(useSkyBoxTexture_UniLoc, (float)GL_TRUE);
+
+		//GLint useSkyBoxTexture2_UniLoc = glGetUniformLocation(program, "useSkyBoxTexture2");
+		//glUniform1f(useSkyBoxTexture2_UniLoc, (float)GL_TRUE);
 
 		glm::mat4 matIdentity = glm::mat4(1.0f);
 		DrawObject(pSkyBox, matIdentity, program);
@@ -442,6 +455,64 @@ int main(void)
 
 		pSkyBox->bIsVisible = false;
 		glUniform1f(useSkyBoxTexture_UniLoc, (float)GL_FALSE);
+
+
+
+
+
+
+
+
+		/***************************/
+
+
+
+		//cMeshObject* pSkyBox = findObjectByFriendlyName("SkyBoxObject");
+		//// Place skybox object at camera location
+		//pSkyBox->position = camera.Position;
+		//pSkyBox->bIsVisible = true;
+		//pSkyBox->bIsWireFrame = false;
+
+		////		glDisable( GL_CULL_FACE );		// Force drawing the sphere
+		////		                                // Could also invert the normals
+		//		// Draw the BACK facing (because the normals of the sphere face OUT and we 
+		//		//  are inside the centre of the sphere..
+		////		glCullFace( GL_FRONT );
+
+		//// Bind the cube map texture to the cube map in the shader
+		//GLuint cityTextureUNIT_ID = 30;			// Texture unit go from 0 to 79
+		//glActiveTexture(cityTextureUNIT_ID + GL_TEXTURE0);	// GL_TEXTURE0 = 33984
+
+		//int cubeMapTextureID = ::g_pTheTextureManager->getTextureIDFromName("CityCubeMap");
+
+		//// Cube map is now bound to texture unit 30
+		////		glBindTexture( GL_TEXTURE_2D, cubeMapTextureID );
+		//glBindTexture(GL_TEXTURE_CUBE_MAP, cubeMapTextureID);
+
+		////uniform samplerCube textureSkyBox;
+		//GLint skyBoxCubeMap_UniLoc = glGetUniformLocation(program, "textureSkyBox");
+		//glUniform1i(skyBoxCubeMap_UniLoc, cityTextureUNIT_ID);
+
+		////uniform bool useSkyBoxTexture;
+		//GLint useSkyBoxTexture_UniLoc = glGetUniformLocation(program, "useSkyBoxTexture");
+		//glUniform1f(useSkyBoxTexture_UniLoc, (float)GL_TRUE);
+
+		//glm::mat4 matIdentity = glm::mat4(1.0f);
+		//DrawObject(pSkyBox, matIdentity, program);
+
+		////		glEnable( GL_CULL_FACE );
+		////		glCullFace( GL_BACK );
+
+		//pSkyBox->bIsVisible = false;
+		//glUniform1f(useSkyBoxTexture_UniLoc, (float)GL_FALSE);
+
+
+
+		/***************************/
+
+
+
+
 
 
 		// Draw all the objects in the "scene"

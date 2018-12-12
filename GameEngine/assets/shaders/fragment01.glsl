@@ -64,7 +64,11 @@ uniform sampler2D texture07;
 
 // Cube map texture (NOT a sampler3D)
 uniform samplerCube textureSkyBox;
+uniform samplerCube textureSkyBox2;
 uniform bool useSkyBoxTexture;
+uniform float dayMix;
+
+//uniform bool useSkyBoxTexture2;
 
 // 
 uniform bool bAddReflect;		// Add reflection
@@ -92,7 +96,11 @@ void main()
 		// Note for cube maps, the texture coordinates are 3D
 		// (so here we are using the normal on the surface 
 		//  of the sphere, like a "ray cast" really)
-		vec3 skyPixelColour = texture( textureSkyBox, vertNormal.xyz ).rgb;
+		vec3 skyBoxTropical = texture( textureSkyBox, vertNormal.xyz).rgb;
+		vec3 skyBoxSpace = texture( textureSkyBox2, vertNormal.xyz).rgb;
+		
+		vec3 skyPixelColour = (skyBoxTropical.rgb * dayMix) + (skyBoxSpace.rgb * (1.0f - dayMix));
+		//skyPixelColour = texture( textureSkyBox2, vertNormal.xyz).rgb;
 		
 		finalOutputColour.rgb = skyPixelColour;
 		finalOutputColour.a = 1.0f;
