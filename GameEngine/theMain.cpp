@@ -185,7 +185,7 @@ int main(void)
 	::g_pTheTextureManager = new cBasicTextureManager();
 
 
-
+	
 
 	// Loading the uniform variables here (rather than the inner draw loop)
 	GLint objectColour_UniLoc = glGetUniformLocation(program, "objectColour");
@@ -328,7 +328,8 @@ int main(void)
 	loadCameraInfo("camera.txt");
 
 
-
+	camera.b_controlledByScript = true;
+	camera.newViewMat = glm::lookAt(camera.Position, findObjectByFriendlyName("mainIsland")->position, glm::vec3(0.0f, 1.0f, 0.0f));
 
 	//*****************************************************************
 	float offtime = 0;

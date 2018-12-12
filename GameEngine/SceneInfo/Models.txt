@@ -4,15 +4,15 @@ Position 0 10 0
 DiffureRGB_Alpha  0 0 0 0.5
 SpecularRGB_Power 1 1 1 100
 QuatXYZW_rotation 0 0 0 1
-Scale  1 1 1
+Scale  2 2 2
 IsVisible  1
 IsUpdByPhys  1
 IsWireFrame  0
 Textures: 3
 Texture0_name metalTex.bmp
-Texture0_strength 0
+Texture0_strength 0.0300001
 Texture1_name metalTex.bmp
-Texture1_strength 0
+Texture1_strength -0.0300001
 Texture2_name caustics.bmp
 Texture2_strength 1
 Friendly_Name lower
@@ -21,7 +21,7 @@ Position 0 0 0
 DiffureRGB_Alpha  0 0 0 1
 SpecularRGB_Power 1 1 1 100
 QuatXYZW_rotation 0 0 0 1
-Scale  1 1 1
+Scale  2 2 2
 IsVisible  1
 IsUpdByPhys  1
 IsWireFrame  0
@@ -37,7 +37,7 @@ Texture3_strength 1
 Friendly_Name ivysaur
 Mesh_Name ivysaur.ply
 Position 0.5 35.75 -3.5
-DiffureRGB_Alpha  0 0 0 0.6
+DiffureRGB_Alpha  0 0 0 1
 SpecularRGB_Power 1 1 1 100
 QuatXYZW_rotation 0 0.442522 0 -0.896761
 Scale  3.20001 3.20001 3.20001

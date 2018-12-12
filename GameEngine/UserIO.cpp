@@ -85,7 +85,7 @@ void key_callback( GLFWwindow* window,
 	if (glfwGetKey(window, GLFW_KEY_ENTER))
 	{
 		
-
+		camera.b_controlledByScript = false;
 
 	}
 
